@@ -11,9 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     double nr1,nr2,sum;
-    TextView textView;
-    EditText num1;
-    EditText num2;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,13 +24,11 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //nr1=Double.parseDouble(num1.getText().toString());
                 nr1=Double.parseDouble(String.valueOf(num1.getText()));
                 nr2=Double.parseDouble(String.valueOf(num2.getText()));
                 sum = nr1+nr2;
                 String s = String.valueOf(sum);
                 textView.setText(s);
-                //System.out.println("caca");
             }
         });
 
